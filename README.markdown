@@ -103,8 +103,7 @@ public static int TheAnswer = 42;
 All properties are written in **PascalCase**. For example:
 
 ```csharp
-public int PageNumber 
-{
+public int PageNumber {
     get { return pageNumber; }
     set { pageNumber = value; }
 }
@@ -223,8 +222,7 @@ for (int i = 0; i < 10; i++)
 **PREFER:**
 
 ```csharp
-for (int i = 0; i < 10; i++) 
-{
+for (int i = 0; i < 10; i++) {
     Debug.Log("index=" + i);
 }
 ```
