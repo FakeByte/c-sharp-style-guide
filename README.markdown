@@ -73,8 +73,7 @@ All non-static fields are written **camelCase**. Per Unity convention, this incl
 For example:
 
 ```csharp
-public class MyClass 
-{
+public class MyClass {
     public int publicField;
     int packagePrivate;
     private int myPrivate;
@@ -267,20 +266,6 @@ All braces get their own line as it is a C# convention:
 **AVOID:**
 
 ```csharp
-class MyClass {
-    void DoSomething() {
-        if (someTest) {
-          // ...
-        } else {
-          // ...
-        }
-    }
-}
-```
-
-**PREFER:**
-
-```csharp
 class MyClass
 {
     void DoSomething()
@@ -297,19 +282,24 @@ class MyClass
 }
 ```
 
+**PREFER:**
+
+```csharp
+class MyClass {
+    void DoSomething() {
+        if (someTest) {
+          // ...
+        } else {
+          // ...
+        }
+    }
+}
+```
+
 Conditional statements are always required to be enclosed with braces,
 irrespective of the number of lines required.
 
 **AVOID:**
-
-```csharp
-if (someTest)
-    doSomething();  
-
-if (someTest) doSomethingElse();
-```
-
-**PREFER:**
 
 ```csharp
 if (someTest) 
@@ -322,6 +312,17 @@ if (someTest)
     DoSomethingElse();
 }
 ```
+
+**PREFER:**
+
+```csharp
+if (someTest) {
+    doSomething();  
+}
+
+if (someTest) doSomethingElse();
+```
+
 ## Switch Statements
 
 Switch-statements come with `default` case by default (heh). If the `default` case is never reached, be sure to remove it.
@@ -343,12 +344,11 @@ switch (variable)
 **PREFER:**  
   
 ```csharp
-switch (variable) 
-{
-    case 1:
-        break;
-    case 2:
-        break;
+switch (variable) {
+case 1:
+    break;
+case 2:
+    break;
 }
 ```
 
