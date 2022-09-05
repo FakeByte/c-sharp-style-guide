@@ -98,6 +98,13 @@ Static fields are the exception and should be written in **PascalCase**:
 ```csharp
 public static int TheAnswer = 42;
 ```
+
+Constant fields are also an exception and should be written in **Uppercase** with **Underscores** between words:
+
+```csharp
+public const int THE_ANSWER = 42;
+```
+
 ### Properties
 
 All properties are written in **PascalCase**. For example:
